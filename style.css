@@ -1,0 +1,111 @@
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  box-sizing: border-box;
+
+  flex: 7% 0 1;
+  height: 8vw;
+  border: 2px solid gray;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  /* 將過大的背景設定成適當大小 */
+  background-size: cover;
+}
+
+.paired {
+  background-color:lightyellow;
+}
+
+#header {
+ display: flex;
+ /* flex-direction定義主軸方向 */
+ flex-direction: column;
+ align-items: flex-end;
+ margin: 3px;
+ width: 95%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+  max-height: 3em;
+  margin: 0.5em;
+}
+
+#header .title h2 {
+  padding: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color:slateblue
+}
+
+#header .timesTried {
+  color: tomato;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f
+  }
+}
+
+/* Game Finished */
+
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 45px 0
+}
+
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0
+}
+
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 500;
+  color: #758d9a
+}
